@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143441; border: 5px solid #fff;">
+  <a class="navbar-brand" href="/"><i class="fas fa-dragon"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Overview<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/regions.html">Regions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/factions.html">Factions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/people.html">People</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/artifacts.html">Artifacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/rules.html">Rules</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/pages/initiative.html">Initiative</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/players.html">Players</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+  <h3>INITIATIVE</h3>
+  <p><i>- An Interactive Inititiave Tool -</i><br></p>
+    <hr>
+
+  <div id="app">
+    <p v-show="activeTodos.length === 0"></p>
+    <form v-on:submit.prevent="addItem">
+      <input type="text" v-model="message">
+      <button type="submit">Add</button>
+    </form>
+    <div class="controls">
+      <button v-on:click="showAll()">Show All</button>
+      <button v-on:click="showActive()">Show Alive</button>
+      <button v-on:click="showDefeated()">Show Defeated</button>
+      <button v-on:click="deleteCompleted()">Delete Defeated</button>
+    </div>
+    <ul>
+      <li v-for="item in filteredTodos" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+        <input type="checkbox" v-model="item.completed"/>
+        <label v-bind:class="{ completed: item.completed }">{{ item.text }}</label>
+        <button v-on:click="deleteItem(item)" class="delete">X</button>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="footer">
+    <p>
+    <a href="https://github.com/SamSchmuhl/CreativeProject-3">My Github</a>
+    </p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="/vue.js"></script>
+</body>
+
+</html>

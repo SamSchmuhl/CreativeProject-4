@@ -1,0 +1,213 @@
+.navbar-brand {
+  border: 1px solid #fff;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Gill Sans, sans-serif;
+}
+
+.nav-link {
+  font-family: Gill Sans, sans-serif;
+  font-size: 1.4em;
+}
+
+.portfolio {
+  display: grid;
+  grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.image img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  padding-bottom: 20px;
+}
+.display img {
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.another img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.mini img {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5AB36D;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  opacity: 0.8;
+}
+
+h1 {
+  padding-top: 30px;
+  font-family: "Luminari", fantasy;
+  text-align: center;
+  font-size: 70px;x
+}
+h2 {
+  padding-top: 10px;
+  font-family: "Luminari", fantasy;
+  text-align: center;
+}
+h3 {
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  font-family: "Luminari", fantasy;
+  text-align: center;
+}
+p {
+  font-family: Gill Sans, sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body {
+  background-color: #C4B69A;
+  padding-bottom: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left: 100px solid #143441;
+  border-right: 100px solid #143441;
+}
+
+.about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  border-radius: 20%;
+}
+
+.masonry { /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
+    margin: 10px;
+}
+
+.item { /* Masonry bricks or child elements */
+    background-color: #C4B69A;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+.item img {
+    width: 100%;
+}
+
+.rules {
+  display: block;
+  text-align: center;
+}
+
+h4 {
+  font-family: Gill Sans, sans-serif;
+}
+
+#results {
+  padding: 30px;
+}
+#results p {
+  font-family: Gill Sans, sans-serif;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+#app {
+  display: block;
+  text-align: center;
+}
+
+#app ul {
+    list-style: none;
+}
+
+#app li {
+  background: #fff;
+  width: 512px;
+  min-height: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 103px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+#app .delete {
+    display: none;
+    margin-left: auto;
+}
+
+#app li:hover .delete {
+    display: block;
+}
+
+#app label {
+    width: 400px;
+
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Form */
+
+#app input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+#app input[type=text] {
+    font-size: 1em;
+}
+
+#app input[type=number] {
+    font-size: 1em;
+    transform: scale(0.5);
+    margin-right: 10;
+}
+
+#app button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
